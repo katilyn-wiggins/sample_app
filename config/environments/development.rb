@@ -13,6 +13,11 @@ Rails.application.configure do
 
   # Show full error reports.
   config.consider_all_requests_local = true
+  
+  # for mailers
+  config.action_mailer.raise_delivery_errors = false
+  host = '7078750aeee541b095e93f7a3cb32b68.vfs.cloud9.us-east-2.amazonaws.com'
+  config.action_mailer.default_url_options = { host: host, protocol: 'https' } 
 
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
